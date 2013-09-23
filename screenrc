@@ -1,0 +1,9 @@
+defencoding utf8
+hardstatus alwayslastline  "%{= wk} %-w%{=b dk} %n %t %{-}%+w %= [%H] %m/%d %c%{-}"
+bind s colon "screen ssh"
+defscrollback 10024
+
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"
+term screen-256color-bce
