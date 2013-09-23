@@ -1,0 +1,4 @@
+misc-settings
+=============
+
+Miscellaneous settings
