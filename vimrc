@@ -53,9 +53,6 @@ set autoindent
 nnoremap <C-Tab> gt
 nnoremap <C-S-Tab> gT
 
-filetype plugin on
-filetype indent on
-
 "folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
@@ -77,16 +74,6 @@ autocmd BufReadPost *
      \ endif
 set viminfo^=% " Remember info about open buffers on close
 
-:map <C-f> :execute 'NERDTreeToggle ' . getcwd()<CR>
-:map <C-t> :FufFile<CR>
-:map <C-b> :FufBuffer<CR>
-" :map <C-t> :FuzzyFinderTextMate<CR>
-" :map <C-b> :FuzzyFinderBuffer<CR>
-" :map <C-l> :FuzzyFinderMruFile<CR>
-" :map <C-p> :FuzzyFinderMruCmd<CR>
-
-
-:map <c-_> :TComment
 
 noremap <S-u> <S-j>
 noremap <S-j> <Pagedown>
@@ -100,3 +87,27 @@ let g:indent_guides_guide_size=1
 
 " Zencoding mapping
 let g:user_zen_expandabbr_key = '<c-y>'
+
+
+"----------------------- VUNDLE BUNDLE -----------------------
+set nocompatible              " be iMproved
+filetype off                  " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+source ~/.vim/vundle
+"------------------ END OF VUNDLE BUNDLE --------------------
+
+filetype plugin on
+filetype indent on
+
+:map <C-f> :execute 'NERDTreeToggle ' . getcwd()<CR>
+:map <C-t> :FufFile<CR>
+:map <C-b> :FufBuffer<CR>
+" :map <C-t> :FuzzyFinderTextMate<CR>
+" :map <C-b> :FuzzyFinderBuffer<CR>
+" :map <C-l> :FuzzyFinderMruFile<CR>
+" :map <C-p> :FuzzyFinderMruCmd<CR>
+
+:map <c-_> :TComment
