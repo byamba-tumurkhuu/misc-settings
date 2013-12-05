@@ -92,8 +92,6 @@ noremap <S-u> <S-j>
 noremap <S-j> <Pagedown>
 noremap <S-k> <Pageup>
 
-source ~/.vim/vamrc
-
 " Indent Guide settings
 set ts=2 sw=2 et
 let g:indent_guides_start_level=2
